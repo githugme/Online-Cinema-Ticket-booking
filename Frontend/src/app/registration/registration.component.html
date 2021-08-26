@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="./favicon.png">
+
+    <title>Register</title>
+
+</head>
+<body style="box-sizing: border-box; background-color: #DA0037;">
+
+
+<div style="display: flex; justify-content: center; flex-grow: 1; max-width: 90%; margin: auto; padding-bottom: 400px;">
+
+
+
+<div>
+  <img style="height: 300px; flex-grow: 1; margin-top: 100px;" src="assets/Registration/PickMyShow.png" alt="">
+</div>
+
+    <div style="max-width: 100%;margin-top: 50px; margin-left: 100px; border-left: 5px solid #ddd; padding: 40px;">
+
+
+        <h3 style="color: lightcyan; margin-bottom: 30px;">REGISTER</h3>
+
+
+    <form (ngSubmit)="saveUser()">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">First name</span>
+        </div>
+
+        <input placeholder="First name" type="text" class="form-control" name="fName" [(ngModel)]="user.fName">
+
+    </div>
+
+    <div class="input-group mb-3">
+
+      <div class="input-group-prepend">
+        <span class="input-group-text">Last name</span>
+      </div>
+
+      <input placeholder="Last name" type="text" class="form-control" name="lName" [(ngModel)]="user.lName">
+  </div>
+
+
+            <div class="input-group mb-3">
+
+              <div class="input-group-prepend">
+                <span class="input-group-text">Email</span>
+              </div>
+
+              <input placeholder="Email ( Username )" type="email" name="email" class="form-control" [(ngModel)]="user.email">
+
+          </div>
+
+          <div class="input-group mb-3">
+
+            <div class="input-group-prepend">
+              <span class="input-group-text" >Phone</span>
+            </div>
+
+            <input placeholder="Phone" type="number" class="form-control" name="phone" [(ngModel)]="user.phone">
+
+        </div>
+        <div class="input-group mb-3">
+
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+            </div>
+
+            <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="user.gender" name="gender">
+              <option selected>Choose</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+
+         </div>
+         <!-- <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">DOB</span>
+            </div>
+            <input placeholder="Date of birth" type="date" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div> -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">Password</span>
+                </div>
+
+                <input placeholder="Create a Password" type="password" class="form-control" [(ngModel)]="user.password" name="password">
+
+              </div>
+
+
+              <button style="border: 2px solid #ddd; width: 140px; margin-bottom: 15px;" type="submit" class="btn btn-danger">Register</button>
+
+              <p style="color: #ddd;">Already have an account? <a style="text-decoration: underline; color: floralwhite;" routerLink="/Login">Login</a></p>
+
+            </form>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
